@@ -1,0 +1,74 @@
+.about {
+    min-height: 100vh;
+    background-color: #001d2d;
+    .grid-container {
+        padding: 120px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 220px 130px auto;
+        grid-template-areas: "my_photo about about"
+                             "my_photo web mobile"
+                             "my_photo design .";
+    }
+    &__block {
+        margin-left: 70px;
+    }
+    &__divider {
+        width: 60px;
+        height: 2px;
+        border: 2px solid $main-color;
+    }
+    &__descr {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    &__item {
+        display: flex;
+        margin: 40px 0 0 70px;
+        position: relative;
+        z-index: 2;
+        @include before_circle;
+        &:before {
+            top: 0;
+        }
+        &__descr {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &__header {
+        margin-bottom: 6px;
+    }
+    &__subtitle {
+        position: relative;
+        z-index: 2;
+        padding-left: 12px;
+        margin-top: 6px;
+        @include before_circle;
+    }
+    &__svg {
+        padding: 12px 20px 0 16px;
+        &_padding {
+            padding: 12px 20px 0 20px;
+        }
+    }
+    &__title {
+        line-height: 60px;
+        margin-top: 6px;
+    }
+    #main_photo {
+        grid-area: my_photo;
+    }
+    #about_me {
+        grid-area: about;
+    }
+    #web_dev {
+        grid-area: web;
+    }
+    #mobile_dev {
+        grid-area: mobile;
+    }
+    #desing {
+        grid-area: design;
+    }
+}
