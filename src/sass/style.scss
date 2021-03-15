@@ -10,22 +10,20 @@
     padding: 0;
     color: $text-color;
 }
+body {
+    background-color: #06090f;
+}
 
 .container {
     width: 1140px;
     margin: 0 auto;
 }
 
-svg {
-    path {
-        fill: $text-color;
-    }
-}
-
 .divider {
     width: 60px;
     height: 3px;
     background: $main-color;
+    margin: 25px auto 0 auto;
 }
 
 @import 'blocks/promo';
@@ -34,3 +32,4 @@ svg {
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
 @import 'blocks/about';
+@import 'blocks/resume';
