@@ -1,0 +1,95 @@
+.skills {
+    &__title {
+        position: relative;
+        text-align: center;
+        padding: 5px 0 6px 0;
+        @include before_circle;
+        &:before {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__wrapper {
+        padding: 60px 10px 120px 10px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(270px, auto));
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        gap: 13px;
+    }
+    &__item {
+        border: 1px solid $text-color;
+        padding: 30px 30px 25px 30px;
+        &-title {
+            margin: 20px 0 15px 0;
+
+        }
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+
+    &__progress {
+        &-wrapper {
+        margin-bottom: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 70px);
+        column-gap: 45px;
+        row-gap: 30px;
+        }
+        &-title {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0 27px 14px;
+            span {
+                font-size: 14px;
+                font-weight: 500;
+            }
+            @include before_circle;
+            &:before {
+                top: 0;
+            }
+        }
+        &-item {
+            h2 {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__rectangle {
+        width: 350px;
+        height: 14px;
+        border-radius: 4px;
+        background-color: $text-color;
+        &-createWeb, &-devApps, &-data, &-creativity, &-design, &-softSkills {
+            height: 14px;
+            border-radius: 3px;
+            background-color: $main-color;
+        }
+        &-createWeb {
+            width: 100%;
+        }
+        &-devApps {
+            width: 85%;
+        }
+        &-data {
+            width: 90%;
+        }
+        &-creativity {
+            width: 75%;
+        }
+        &-design {
+            width: 90%;
+        }
+        &-softSkills {
+            width: 95%;
+        }
+    }
+}
