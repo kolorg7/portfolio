@@ -1,0 +1,27 @@
+.price {
+    &__wrapper {
+        padding: 60px 50px 120px 50px;
+        display: grid;
+        grid-template: repeat(3, minmax(44px, auto)) / repeat(2, 345px);
+        gap: 15px;
+        justify-content: space-between;
+    }
+    &__title {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(57px, auto) minmax(89px, auto);
+        justify-content: space-between;
+        padding-left: 25px;
+        @include before_circle;
+        &:before {
+            width: 15px;
+            height: 15px;
+            top: 3px;
+        }
+    }
+    &__subtitle {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 5px 0 0 25px;
+    }
+}

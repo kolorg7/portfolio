@@ -11,7 +11,7 @@
     color: $text-color;
 }
 body {
-    background-color: #06090f;
+    background-color: #181818;
 }
 
 .container {
@@ -39,3 +39,4 @@ p, h1, h2, h3, h4, h5, h6 {
 @import 'blocks/resume';
 @import 'blocks/skills';
 @import 'blocks/portfolio';
+@import 'blocks/price';
